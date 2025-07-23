@@ -144,8 +144,8 @@ export default function Index() {
       image: "https://opengraph.githubassets.com/1/SujitChaudhary2005/Scientific-Computing-Python"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      title: "AI ML Learning Journey",
+      description: "A collection of projects and exercises from my AI/ML learning journey.",
       tech: ["jupyter notebook", "Python", "Pandas", "NumPy"],
       github: "https://github.com/SujitChaudhary2005/AI-ML-Learning-Journey",
       live: false,
