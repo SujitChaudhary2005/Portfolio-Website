@@ -11,6 +11,9 @@ import { SparklesUnderName } from "@/components/SparklesPreview";
 import { Component as EtheralShadow } from "@/components/ui/etheral-shadow";
 import { Github, Linkedin, Mail, ExternalLink, Download, Menu, X, Send } from "lucide-react";
 import GitHubCalendar from 'react-github-calendar';
+import { toast } from "sonner";
+import confetti from "canvas-confetti";
+import { Toaster } from "sonner";
 
 export default function Index() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -95,21 +98,27 @@ export default function Index() {
   }
 
   const handleEmailSubmit = async () => {
-    if (!isValidEmail(emailForm.email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-    const res = await fetch('/api/sendEmail', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(emailForm),
-    });
-    if (res.ok) {
-      alert('Message sent!');
-      setIsDialogOpen(false);
-      setEmailForm({ email: "", subject: "", message: "" });
-    } else {
-      alert('Failed to send message. Please try again later.');
+    try {
+      // Optionally show a loading toast
+      const loadingToast = toast.loading("Sending message...");
+      const res = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(emailForm),
+      });
+      toast.dismiss(loadingToast);
+
+      if (res.ok) {
+        toast.success("Message sent! 🎉");
+        confetti(); // Simple confetti burst
+        setIsDialogOpen(false);
+        setEmailForm({ email: "", subject: "", message: "" });
+      } else {
+        const data = await res.json();
+        toast.error(`Failed to send message: ${data.error || "Unknown error"}`);
+      }
+    } catch (error) {
+      toast.error("Network error: Could not send message.");
     }
   };
 
@@ -570,6 +579,7 @@ export default function Index() {
           </div>
         </div>
       </footer>
+      <Toaster richColors position="top-center" />
     </div>
   );
 }
