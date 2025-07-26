@@ -580,7 +580,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-center">
             <p className="text-muted-foreground text-center">
-              © 2024 Sujit Chaudhary. All rights reserved.
+              © 2025 Sujit Chaudhary. All rights reserved.
             </p>
           </div>
         </div>
