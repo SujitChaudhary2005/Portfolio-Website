@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "sonner";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 
 const queryClient = new QueryClient();
 
@@ -15,7 +16,7 @@ if (typeof document !== 'undefined') {
 }
 
 const App = () => (
-  <>
+  <ErrorBoundary>
     <Toaster richColors position="top-center" />
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
@@ -26,7 +27,7 @@ const App = () => (
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
-  </>
+  </ErrorBoundary>
 );
 
 createRoot(document.getElementById("root")!).render(<App />);

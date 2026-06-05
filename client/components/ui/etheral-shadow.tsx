@@ -125,11 +125,12 @@ export function Component({
                                 <feColorMatrix
                                     ref={feColorMatrixRef}
                                     in="undulation"
+                                    result="animatedNoise"
                                     type="hueRotate"
                                     values="180"
                                 />
                                 <feColorMatrix
-                                    in="dist"
+                                    in="animatedNoise"
                                     result="circulation"
                                     type="matrix"
                                     values="4 0 0 0 1  4 0 0 0 1  4 0 0 0 1  1 0 0 0 0"
