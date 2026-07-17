@@ -10,7 +10,8 @@ import { Label } from "@/components/ui/label";
 import { SparklesUnderName } from "@/components/SparklesPreview";
 import { Component as EtheralShadow } from "@/components/ui/etheral-shadow";
 import { Github, Linkedin, Mail, ExternalLink, Download, Menu, X, Send } from "lucide-react";
-import GitHubCalendar from 'react-github-calendar';
+import _GitHubCalendar from 'react-github-calendar';
+const GitHubCalendar = (_GitHubCalendar as any).default || _GitHubCalendar;
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { Toaster } from "sonner";
@@ -167,6 +168,14 @@ export default function Index() {
       github: "https://github.com/SujitChaudhary2005/QR-Code-Generator",
       live: false,
       image: "https://opengraph.githubassets.com/1/SujitChaudhary2005/QR-Code-Generator"
+    },
+    {
+      title: "Loyino",
+      description: "Loyino is a digital loyalty card and stamp card app for a single business. It allows customers to collect stamps and redeem rewards, while providing businesses with analytics and customer engagement tools.",
+      tech: ["TypeScript", "Supabase", "JavaScript"],
+      github: "https://github.com/valanthir-tech/Loyino",
+      live: "https://loyino.valanthir.com/",
+      image: "https://opengraph.githubassets.com/1/valanthir-tech/Loyino"
     }
     
   ];
