@@ -185,6 +185,14 @@ export default function Index() {
       github: false,
       live: "https://loyino.valanthir.com/",
       image: "../public/LoyinoProjectLogo.png"
+    },
+    {
+      title: "Image Processing",
+      description: "This repository contains three lab reports of digital image processing experiments implemented in Python — covering fundamental operations, geometric and intensity transformations, spatial filtering, histogram processing, edge detection, and morphological operations. ",
+      tech: ["Python", "Pillow", "NumPy", "Matplotlib"],
+      github: "https://github.com/SujitChaudhary2005/Image-Processing",
+      live: false,
+      image: "https://opengraph.githubassets.com/1/SujitChaudhary2005/Image-Processing"
     }
     
   ];
