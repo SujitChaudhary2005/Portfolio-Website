@@ -132,14 +132,23 @@ export default function Index() {
     { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" },
     { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
     { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
-    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" }
+    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+    { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+    { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" },
+    { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" },
+    { name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" },
+    { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" },
+    { name: "Matplotlib", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" },
+    { name: "cloudflare", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg" },
+
+
   ];
 
   type Project = {
     title: string;
     description: string;
     tech: string[];
-    github: string;
+    github: string | false;
     live: string | false;
     image: string;
   };
@@ -172,10 +181,10 @@ export default function Index() {
     {
       title: "Loyino",
       description: "Loyino is a digital loyalty card and stamp card app for a single business. It allows customers to collect stamps and redeem rewards, while providing businesses with analytics and customer engagement tools.",
-      tech: ["TypeScript", "Supabase", "JavaScript"],
-      github: "https://github.com/valanthir-tech/Loyino",
+      tech: ["TypeScript", "Supabase", "JavaScript", "Cloudflare", "Vercel"],
+      github: false,
       live: "https://loyino.valanthir.com/",
-      image: "https://opengraph.githubassets.com/1/valanthir-tech/Loyino"
+      image: "../public/LoyinoProjectLogo.png"
     }
     
   ];
