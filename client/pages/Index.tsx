@@ -184,7 +184,7 @@ export default function Index() {
       tech: ["TypeScript", "Supabase", "JavaScript", "Cloudflare", "Vercel"],
       github: false,
       live: "https://loyino.valanthir.com/",
-      image: "../public/LoyinoProjectLogo.png"
+      image: "/LoyinoProjectLogo.png"
     },
     {
       title: "Image Processing",
